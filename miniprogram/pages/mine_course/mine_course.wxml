@@ -1,0 +1,52 @@
+<!--miniprogram/pages/mine_course/mine_course.wxml-->
+<block wx:if="{{number==0}}">
+  <view class='container'>
+    <view class='top'>
+      <text>暂无预约信息</text>
+      <button class='button' size='mini' bindtap='yuyue'>去 约 课</button>
+    </view>
+  </view>
+</block>
+<block wx:elif="{{number==1}}">
+  <view wx:for="{{mine_course}}" bindtap='details' wx:for-item="item" wx:key="" data-index='{{item._id}}'>
+    <block wx:if="{{yuyue_id==item._id&&flag==false}}">
+      <view class='_course'>
+        <view class='course' style="height:130rpx;">
+        <view class='yuyuecourse2'>
+          <image src='../../images/kecheng.png' style='height:65rpx;width:65rpx;'></image>
+        </view>
+          <view class='course1'>
+            <view class='yuyuecourse_next'>{{item.week}}</view>
+            <view class='time'>{{item.time1}}-{{item.time2}}</view>
+          </view>
+          <view>
+            <image src='../../images/time1.png' style='width:50rpx;height:50rpx;margin-left:460rpx'></image>
+          </view>
+        </view>
+        <view class='top1'>
+          <view class='top2'>难度：
+            <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+          </view>
+          <view class='top2'>时间:{{item.time1}}-{{item.time2}}</view>
+          <view class='top2'>瑜伽教练:{{item.yogoTeacher}}</view>
+          <view class='top2'>瑜伽教练:{{item.yogoType}}</view>
+        </view>
+      </view>
+    </block>
+
+    <block wx:else>
+      <view class='yuyuecourse' style="height:130rpx;">
+        <view class='yuyuecourse2'>
+          <image src='../../images/kecheng.png' style='height:65rpx;width:65rpx;'></image>
+        </view>
+        <view class='yuyuecourse1'>
+          <view class='yuyuecourse_next'>{{item.week}}</view>
+          <view class='time'>{{item.time1}}-{{item.time2}}</view>
+        </view>
+        <view>
+          <image src='../../images/time.png' style='width:50rpx;height:50rpx;margin-left:460rpx'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>

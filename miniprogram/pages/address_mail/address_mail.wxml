@@ -1,0 +1,19 @@
+<!--miniprogram/pages/address_mail/address_mail.wxml-->
+<view class='contain'>
+  <view class='top'>
+    <view class='megss'>
+      <view class='megss1'>
+        <text>电子邮箱</text>
+        <input style='font-size:28rpx;' placeholder="请输入qq邮箱" value="{{mail}}" bindinput="_mail"/>
+      </view>
+      <view class='megss1'>
+        <text>详细地址</text>
+        <!-- <view style='font-size:28rpx;'>222</view> -->
+      </view>
+      <view class='megss1'>
+        <textarea style='font-size:28rpx;height:100%;' placeholder="请输入地址" value="{{address}}" bindinput="_address"></textarea>
+      </view>
+      <button class='operate ' bindtap="save">保 存</button>
+    </view>
+  </view>
+</view>

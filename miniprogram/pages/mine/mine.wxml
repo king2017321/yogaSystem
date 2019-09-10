@@ -1,0 +1,63 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<block wx:if="{{flag==true}}">
+  <view class='contain'>
+    <view class='top'>
+      <view class='user'>
+        <view class='userHead'>
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class='userSex'>
+          <open-data type="userNickName"></open-data>
+        </view>
+      </view>
+      <view class='megss'>
+        <view class='megss1'>
+          <text>会员积分</text>
+          <view style='font-size:28rpx;'>{{jifen_value}}</view>
+        </view>
+        <view class='megss1'>
+          <text>魅力值</text>
+          <view style='font-size:28rpx;'>{{member}}</view>
+        </view>
+        <view class='megss1'>
+          <text>性别</text>
+          <view style='font-size:28rpx;'>
+            <open-data type="userGender" lang="zh_CN"></open-data>
+          </view>
+        </view>
+        <view class='megss1'>
+          <text>所在地</text>
+          <view style='font-size:28rpx;'>
+            <open-data type="userProvince" lang="zh_CN"></open-data>
+            <open-data type="userCity" lang="zh_CN"></open-data>
+          </view>
+        </view>
+        <view class='megss1'>
+          <text>出生日期</text>
+          <view>
+            <picker mode="date" value="{{date}}" start="1980-01-01" end="2016-01-01" bindchange="bindDateChange">
+              <view style='font-size:28rpx;opacity: 0.9;'>{{date}}</view>
+            </picker>
+          </view>
+        </view>
+        <view class='megss1'>
+          <text>详细地址</text>
+          <view>
+            <image src='../../images/time.png' style='width:40rpx;height:40rpx;opacity:0.7;' bindtap='address'></image>
+          </view>
+        </view>
+        <view class=' megss1 '>
+          <text>电子邮箱</text>
+          <view style='font-size:28rpx;'>{{mail}}</view>
+        </view>
+        <view class='megss1 '>
+          <text>个性签名</text>
+          <view style='font-size:28rpx; opacity:0.7;font-size:22rpx; '>暂不可使用</view>
+        </view>
+        <button wx:if="{{flag1==true}}" class='operate' bindtap="must">保 存</button>
+      </view>
+    </view>
+  </view>
+</block>
+<!-- <open-data type="userGender" lang="zh_CN"></open-data>
+<open-data type="userCity" lang="zh_CN"></open-data> -->

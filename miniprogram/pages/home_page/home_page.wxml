@@ -1,0 +1,82 @@
+<view class="container">
+  <swiper class='back' circular='true' indicator-dots="true" autoplay='true' interval='10000'>
+    <swiper-item>
+      <image wx:if="{{image1[0].fileid}}" src='{{image1[0].fileid}}' style='width:750rpx'></image>
+    </swiper-item>
+    <swiper-item>
+      <image wx:if="{{image2[0].fileid}}" src='{{image2[0].fileid}}' style='width:750rpx'></image>
+    </swiper-item>
+    <swiper-item>
+      <image wx:if="{{image3[0].fileid}}" src='{{image3[0].fileid}}' style='width:750rpx'></image>
+    </swiper-item>
+  </swiper>
+  <view class='function' style='height:{{height}}'>
+    <view class='function1_next' bindtap='activity'>
+      <image src='../../images/huodong.png' class='function_image'></image>
+      <text>活动</text>
+    </view>
+    <view class='function1_next' bindtap='yuyueCourse'>
+      <image src='../../images/yuke_function.png' class='function_image'></image>
+      <text>约课</text>
+    </view>
+    <view class='function1_next' bindtap='photo'>
+      <image src='../../images/zhaopianqiang.png' class='function_image'></image>
+      <text>照片墙</text>
+    </view>
+    <view class='function1_next' bindtap='qita'>
+      <image src='../../images/qita.png' class='function_image'></image>
+      <text>其它</text>
+    </view>
+    <block wx:if="{{ manager==true}}">
+      <view class='function1_next' bindtap='managerCourse'>
+        <image src='../../images/course.png' class='function_image'></image>
+        <text>课程管理</text>
+      </view>
+      <view wx:if="{{yesRegister==true}}" class='function1_next' bindtap='managerMember'>
+        <image src='../../images/huiyuanguanli.png' class='function_image'></image>
+        <text>会员管理</text>
+      </view>
+      <view class='function1_next' bindtap='gongGao'>
+        <image src='../../images/gonggaoguanli.png' class='function_image'></image>
+        <text>公告管理</text>
+      </view>
+      <view wx:if="{{yesRegister==true}}" class='function1_next'>
+      <image src='../../images/qita.png'  bindtap='others' class='function_image'></image>
+      <text>其它</text>
+    </view>
+    </block>
+  </view>
+  <view class='gongGao'>
+    <text>公告</text>
+    <text bindtap='more_gongGao'>更多</text>
+  </view>
+  <view class='gongGao_content'>
+    <view class='gongGao_contain' wx:for="{{gongGao}}" wx:for-item="item" wx:for-index="index" wx:key='' data-index="{{item._id}}" bindtap='bind_gongGao'>
+      <text style='width:250rpx;'>{{item.title}}</text>
+      <text style='width:250rpx;'>{{item.time}}</text>
+    </view>
+    <!-- <view class='gongGao_contain'>
+      <text>春节放假通知</text>
+      <text>2018/12/25</text>
+    </view> -->
+  </view>
+  <block wx:if="{{yesRegister==true}}">
+  <view class='contact_us'>
+    <text>联系我们</text>
+  </view>
+  <view class='contact_content'>
+    <view class='contact_contain'>
+      <view class='contact_text'>
+        <text>联系人:{{contact[0].contact}}</text>
+      </view>
+      <view class='contact_text'>
+        <text>电话号码:{{contact[0].phoneNum}}</text>
+      </view>
+      <view class='contact_text'>
+        <text>地址:{{contact[0].address}}</text>
+      </view>
+    </view>
+  </view>
+  </block>
+  
+</view>

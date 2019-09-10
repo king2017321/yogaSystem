@@ -1,0 +1,218 @@
+/* miniprogram/pages/addClass/addClass.wxss */
+
+page {
+  height: 100%;
+}
+/* .styleCourse {
+  width: 250rpx;
+  height: 60rpx;
+  display: inline-block;
+}
+.styleCourse button {
+  background-color: white;
+} */
+.scrollview{
+position: fixed;
+width:100%;
+top:150rpx;
+}
+.roof{
+  border-bottom: 10rpx solid white;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height:60rpx;
+  background-color: #f2f2f2;
+  font-size: 30rpx;
+  top:0;
+  position: fixed;
+  width:100%;
+}
+.swiper-tab {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  position: fixed;
+  top:65rpx;
+  background-color: #f2f2f2;
+  align-items: center;
+  border-bottom: 10rpx solid #f2f2f2;
+  justify-content: space-between;
+}
+.swiper-item {
+  color: black;
+  font-size: 28rpx;
+}
+.active {
+  color:red;
+  border-bottom: 2rpx solid red;
+}
+.choseTime {
+  height: 115rpx;
+  display: flex;
+  margin-top: 10rpx;
+  font-size: 27rpx;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.section {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 50rpx;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 210rpx;
+  background-color: white;
+}
+
+.operate {
+  background: #f2f2f2;
+  font-size: 35rpx;
+  width: 100%;
+  border-radius: 40rpx;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+  /* padding: 9rpx 0;
+  position: fixed;
+  background-color: rgb(243, 94, 94);
+  bottom: 0rpx;
+  border-radius: 25px;
+  height: 120rpx;
+  font-size: 45rpx;
+  justify-content: center; */
+}
+
+.buju {
+  height: 115rpx;
+  display: flex;
+  border-bottom: 10rpx solid #f2f2f2;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.time {
+  display: flex;
+  width: 33%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.time > text:first-child {
+  font-size: 29rpx;
+}
+.time > text:last-child{
+  font-size: 29rpx;
+}
+.time1 {
+  display: flex;
+  width: 25%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.time1 > text:first-child {
+  font-size: 29rpx;
+}
+.time1 > text:last-child{
+  font-size: 24rpx;
+  color:red;
+}
+.yogoType {
+  display: flex;
+  height: 150rpx;
+  width: 25%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.yogoType text{
+  font-size: 27rpx;
+}
+.yogoType > text:last-child{
+color: rgba(141, 129, 129, 0.822);
+}
+.yogoType1 {
+  display: flex;
+  height: 150rpx;
+  width: 25%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.yogoType1 text{
+  font-size: 27rpx;
+  color: rgba(141, 129, 129, 0.822);
+}
+.yuyue {
+  align-items: center;
+  display: flex;
+  width: 33%;
+  height: 150rpx;
+  flex-direction: column;
+  margin-top: 27rpx;
+}
+.yuyue text {
+  font-size: 27rpx;
+  font-style: normal;
+}
+
+.top {
+  background-color: #f2f2f2;
+  /* padding-top: 80rpx;
+  padding-bottom: 120rpx; */
+}
+
+.top1 {
+  background-color: #f2f2f2;
+  /* padding-top: 80rpx;
+  padding-bottom: 20rpx; */
+  box-sizing: border-box;
+}
+/* .container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+} */
+
+.allChose_text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.yuyuecourse {
+  height: 130rpx;
+  display: flex;
+  border-bottom: 10rpx solid #f2f2f2;
+  align-items: center;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.bot {
+  height: 110rpx;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.button{
+  display: flex;
+  margin-left: 5rpx;
+  border-radius: 50rpx;
+  background-color: #f2f2f2;
+  height: 65rpx;
+}
+/* 隐藏滚动条固定用法 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

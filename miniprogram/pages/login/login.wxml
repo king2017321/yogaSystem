@@ -1,0 +1,128 @@
+<view class="container">
+  <swiper class='back' circular='true' autoplay='true' interval='5000'>
+    <swiper-item>
+      <image src='../../images/yugo1.jpg' style='width:750rpx'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/yugo2.jpeg' style='width:750rpx'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/yugo3.jpeg' style='width:750rpx'></image>
+    </swiper-item>
+  </swiper>
+  <view class="swiper-tab">
+    <view class="swiper-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">登陆</view>
+    <view class="swiper-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">注册</view>
+  </view>
+  <block wx:if="{{currentTab==0}}">
+    <view class='top'>
+      <view class='top1'>
+        <image class="nameImage" src="../../images/user.png"></image>
+        <text>账号</text>
+      </view>
+      <view class='top2'>
+        <input placeholder="请输入账号" bindinput="phoneInput" />
+      </view>
+    </view>
+    <view class='top'>
+      <view class='top1'>
+        <image class="nameImage" src="../../images/possword.png"></image>
+        <text>账号</text>
+      </view>
+       <view class='top2'>
+        <input password="true" placeholder="请输入密码" bindinput="passwordInput" />
+      </view> 
+    </view>
+    <view class="loginBtnView">
+      <button class="loginBtn" type="primary" size="{{primarySize}}" bindtap="login">登录</button>
+    </view>
+    <!-- <view class="login-from">
+      
+      <view class="inputView">
+        <image class="nameImage" src="../../images/user.png"></image>
+        <label class="loginLab">账号</label>
+        <input class="inputText" placeholder="请输入账号" bindinput="phoneInput" /> </view>
+      <view class="line"></view>
+     
+      <view class="inputView">
+        <image class="keyImage" src="../../images/possword.png"></image>
+        <label class="loginLab">密码</label>
+        <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> </view>
+      
+      <view class="loginBtnView">
+        <button class="loginBtn" type="primary" size="{{primarySize}}" bindtap="login">登录</button>
+      </view>
+
+    </view> -->
+  </block>
+  <block wx:if="{{currentTab==1}}">
+    <!-- <view class="register">
+      <view class="inputView">
+        <image class="nameImage" src="../../images/user.png"></image>
+        <label class="loginLab">姓名</label>
+        <input class="inputText" placeholder="请输入姓名" bindinput="name" /> </view>
+      <view class="line"></view>
+      
+      <view class="inputView">
+        <image class="nameImage" src="../../images/user.png"></image>
+        <label class="loginLab">电话</label>
+        <input class="inputText" placeholder="请输入电话" bindinput="phoneNumber" /> </view>
+      <view class="line"></view>
+     
+      <view class="inputView">
+        <image class="keyImage" src="../../images/possword.png"></image>
+        <label class="loginLab">密码</label>
+        <input class="inputText" password="true" placeholder="请输入密码" bindinput="password" /> </view>
+      <view class="line"></view>
+      
+      <view>
+        <view class="inputView" style='display:flex;align-items: center'>
+          <image class="keyImage" src="../../images/possword.png"></image>
+          <input  style='font-size: 13px;margin-left:20rpx' placeholder="验证码" bindinput="codeInput" />
+          <button type="primary" style='height:70rpx;font-size:25rpx; border-radius:0;width:40%;' size="mini" disabled="{{disabled}}" bindtap="gainCode">{{codename}}</button>
+        </view>
+      </view>
+      
+      <view class="loginBtnView">
+        <button class="loginBtn" type="primary" size="{{primarySize}}" bindtap="mustRegister">注册</button>
+      </view>
+    </view> -->
+    <view class='top'>
+      <view class='top1'>
+        <image class="nameImage" src="../../images/user.png"></image>
+        <text>姓名</text>
+      </view>
+      <view class='top2'>
+        <input placeholder="请输入姓名" bindinput="name" />
+      </view>
+    </view>
+    <view class='top'>
+      <view class='top1'>
+        <image class="nameImage" src="../../images/user.png"></image>
+        <text>电话</text>
+      </view>
+      <view class='top2'>
+        <input placeholder="请输入电话" bindinput="phoneNumber" />
+      </view>
+    </view>
+    <!-- <view class='top'>
+      <view class='top1'>
+        <image class="nameImage" src="../../images/possword.png"></image>
+        <text>密码</text>
+      </view>
+      <view class='top2'>
+        <input password="true" placeholder="请输入密码" bindinput="password" />
+      </view>
+    </view> -->
+    <view>
+      <view class="top3">
+        <input style='font-size: 12px;margin-left:20rpx' placeholder="验证码" bindinput="codeInput" />
+        <button type="primary" style='display:flex;margin-left: 140rpx; width:300rpx;height:70rpx;border-radius: 0;font-size:25rpx;' size="mini" disabled="{{disabled}}" bindtap="gainCode">{{codename}}</button>
+      </view>
+    </view>
+    <view class="loginBtnView">
+      <button class="loginBtn" type="primary" size="{{primarySize}}" bindtap="mustRegister">注册</button>
+    </view>
+  </block>
+</view>
+<view>{{code}}</view>

@@ -1,0 +1,17 @@
+<view class='container'>
+  <block wx:if="{{number==0}}">
+    <view class='gongGao_contain' wx:for="{{qita}}" wx:for-item="item" wx:for-index="index" wx:key="" data-index="{{item._id}}" bindtap='bind_gongGao'>
+      <text style='width:250rpx;'>{{item.title}}</text>
+      <text style='width:250rpx;'>{{item.time}}</text>
+    </view>
+  </block>
+  <block wx:elif="{{number==1}}">
+    <view class='title'>{{text[0].title}}</view>
+    <view class='top'>
+      <view class='small_title'>{{text[0].title}}</view>
+      <view class='text'>{{text[0].text}}</view>
+      <view class='time'>{{text[0].time}}</view>
+    </view>
+  <button class='operate' bindtap="must">返 回</button>
+  </block>
+</view>

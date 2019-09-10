@@ -1,0 +1,410 @@
+<view style='height: 100%; display: flex;flex-direction: column;padding: 0;box-sizing: border-box;background-color: #f2f2f2;'>
+  <view class="swiper-tab">
+    <view class="swiper-item1 {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">团课</view>
+    <view class="swiper-item2 {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">私教&教培</view>
+  </view>
+  <scroll-view class="scroll-view_H">
+    <view class='list' style='width:{{ width }}rpx;height:220rpx;padding:10rpx'>
+      <view bindtap="select" wx:for="{{ calendar }}" wx:for-item="item" wx:for-index="index" data-index="{{index}}" class='listItem {{index==currentIndex? "current":""}}' wx:key='' data-date="{{ item.date}}">
+        <text class='name'>{{ item.week }}</text>
+        <text class='date'>{{ item.date }}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view wx:if="{{flag==true&&flag1==true}}">
+    <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" style='margin-top:209rpx;display: flex;background-color: #f2f2f2;height:{{srcoll_height}}rpx;'>
+      <swiper-item>
+        <!--logs.wxml-->
+        <scroll-view scroll-y="true" style='height:100%'>
+          <block wx:for="{{Week}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+            <block wx:if="{{item.yogoName=='团课'}}">
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期一'}}">
+                <block wx:if="{{currentWeek==1}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期二'}}">
+                <block wx:if="{{currentWeek==2}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期三'}}">
+                <block wx:if="{{currentWeek==3}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期四'}}">
+                <block wx:if="{{currentWeek==4}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                       <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期五'}}">
+                <block wx:if="{{currentWeek==5}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期六'}}">
+                <block wx:if="{{currentWeek==6}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期日'}}">
+                <block wx:if="{{currentWeek==0}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+            </block>
+          </block>
+
+        </scroll-view>
+      </swiper-item>
+
+
+
+      <swiper-item style='height:100%;'>
+        <!--logs.wxml-->
+        <scroll-view scroll-y="true" style='height:100%;'>
+          <block wx:for="{{Week}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+            <block wx:if="{{item.yogoName=='私教'||item.yogoName=='教培'}}">
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期一'}}">
+                <block wx:if="{{currentWeek==1}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期二'}}">
+                <block wx:if="{{currentWeek==2}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期三'}}">
+                <block wx:if="{{currentWeek==3}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期四'}}">
+                <block wx:if="{{currentWeek==4}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期五'}}">
+                <block wx:if="{{currentWeek==5}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期六'}}">
+                <block wx:if="{{currentWeek==6}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+
+              <block wx:if="{{item.week==currentTime&&stratTime>item.time1}}">
+              </block>
+              <block wx:elif="{{item.week=='星期日'}}">
+                <block wx:if="{{currentWeek==0}}">
+                  <view class='buju'>
+                    <view class='time'>
+                      <text>{{item.time1}}</text>
+                      <text>{{item.time2}}</text>
+                    </view>
+                    <view class='yogoType'>
+                      <text style='margin-left:40rpx;'>{{item.yogoType}}</text>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>难度：
+                        <image wx:for="{{item.yogoNandu}}" src="../../images/xing.jpg" wx:key="index" style='height:20rpx;width:20rpx;'></image>
+                      </view>
+                      <view style='font-size:21rpx;margin-left:40rpx;opacity: 0.5'>老师：{{item.yogoTeacher}}</view>
+                    </view>
+                    <view class='yuyue'>
+                      <view>
+                        <button bindtap="button1" data-index="{{item._id}}" disabled="{{(item.count-item.count1==0&&item.yuyue=='预约')?true:false}}" style='background-color:#d40e5a;font-size:25rpx;width:154rpx;border-radius:35rpx;height:64rpx'>{{item.yuyue}}</button>
+                      </view>
+                      <text>余{{item.count-item.count1}}席</text>
+                    </view>
+                  </view>
+                </block>
+              </block>
+            </block>
+          </block>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+
+<!-- <view class='operate'>
+  <button class='del' bindtap="addClass">管理课程</button>
+</view> -->
+<!-- <view>{{stratTime}}</view>
+<view>{{openid}}</view>
+<view>{{currentTime}}</view> -->

@@ -1,0 +1,8 @@
+<!--miniprogram/pages/yuyue_course/yuyue_course.wxml-->
+<view class='top'>
+    <view class='details'>姓名：</view>
+    <view class='details'>电话：</view>
+    <view class='details'>入会时间：</view>
+    <view class='details'>出生日期：</view>
+    <view class='details'>详细地址：</view>
+  </view>

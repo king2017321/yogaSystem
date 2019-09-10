@@ -1,0 +1,5 @@
+<!--miniprogram/pages/activity/activity.wxml-->
+<view class='container'>
+  <image src='../../images/ziyuan.png' class='function_image'></image>
+  <text>暂无任何活动</text>
+</view>

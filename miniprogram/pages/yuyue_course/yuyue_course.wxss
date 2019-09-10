@@ -1,0 +1,13 @@
+.top {
+  background-color: #f2f2f2;
+  /* padding-top: 80rpx;
+  padding-bottom: 20rpx; */
+}
+.details {
+  display: flex;
+  border-bottom: 5rpx solid #f2f2f2;
+  font-size: 30rpx;
+  height: 100rpx;
+  align-items: center;
+  background-color: white;
+}

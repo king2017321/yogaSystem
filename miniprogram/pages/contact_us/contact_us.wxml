@@ -1,0 +1,35 @@
+<view class='container'>
+  <view class='title'>
+    <text>其它</text>
+  </view>
+  <view class='top'>
+    <view style='display: flex;margin-left:80rpx;width:150rpx'>联系人:</view>
+    <view style='display: flex;margin-left:230rpx;'>
+      <input bindinput='_contact' value='{{contact}}' placeholder-style="font-size:27rpx;" placeholder="请输入联系人" auto-focus='true' />
+    </view>
+  </view>
+  <view class='top'>
+    <view style='display: flex;margin-left:80rpx;width:150rpx'>联系电话:</view>
+    <view style='display: flex;margin-left:230rpx;'>
+      <input bindinput='_phoneNum' value='{{phoneNum}}' placeholder-style="font-size:27rpx;" placeholder="输入电话号码" auto-focus='true' />
+    </view>
+  </view>
+  <view class='text'>
+    <textarea bindinput='_address' value='{{address}}' placeholder="请输入地址" auto-focus='true'></textarea>
+  </view>
+  <button class='operate' bindtap="must">确 定</button>
+  <swiper class='back' circular='true' indicator-dots="true" autoplay='true' interval='10000'>
+    <swiper-item>
+      <image wx:if="{{image1[0].fileid}}" src='{{image1[0].fileid}}' bindtap='_image1' style='width:750rpx'></image>
+    </swiper-item>
+    <swiper-item>
+      <image wx:if="{{image1[0].fileid}}" src='{{image2[0].fileid}}' bindtap='_image2' style='width:750rpx'></image>
+    </swiper-item>
+    <swiper-item>
+      <image wx:if="{{image1[0].fileid}}" src='{{image3[0].fileid}}' bindtap='_image3' style='width:750rpx'></image>
+    </swiper-item>
+  </swiper>
+  <view class='contact_us'>
+    <text>更换轮播图片</text>
+  </view>
+</view>

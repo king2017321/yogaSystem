@@ -1,0 +1,114 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+.back {
+  width: 100%;
+  height: 460rpx;
+}
+
+.function {
+  width: 95%;
+  margin-top: 20rpx;
+  background-color: white;
+  display: flex;
+  align-content: space-between;
+  border-radius: 30rpx;
+  flex-wrap: wrap; /* flex-wrap的作用：决定元素如何换行（排列不下时） （nowrap不换行       wrap换行   wrap-reverse反转）*/
+}
+
+.function1_next {
+  width: 25%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.function1_next text {
+  font-size: 30rpx;
+}
+
+.function_image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.gongGao {
+  margin-top: 10rpx;
+  background-color: #f2f2f2;
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.gongGao > text:first-child {
+  padding-left: 30rpx;
+  opacity: 0.7;
+}
+
+.gongGao >text:last-child {
+  padding-left: 580rpx;
+  opacity: 0.7;
+}
+
+.gongGao_content {
+  width: 95%;
+  height: 130rpx;
+  justify-content: center;
+  margin-top: 10rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 30rpx;
+  flex-wrap: wrap;
+}
+.gongGao_contain {
+  font-size: 30rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.gongGao_contain >text:last-child{
+  font-size: 25rpx;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  /* justify-items: center; */
+}
+.contact_us{
+  margin-top: 10rpx;
+  background-color: #f2f2f2;
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.contact_us text{
+  display: flex;
+  margin-left:30rpx;
+  opacity: 0.7;
+}
+.contact_content{
+  display: flex;
+  background-color: white;
+  width: 95%;
+  align-items: center;
+}
+.contact_contain{
+  width:100%;
+  height: 100%;
+  font-size:30rpx;
+}
+.contact_text{
+  width:92%;
+  margin-left:50rpx; 
+}

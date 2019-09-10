@@ -1,18 +1,56 @@
 {
   "pages": [
+    "pages/appointment/appointment",
+    "pages/contact_us/contact_us",
+    "pages/user_qita/user_qita",
+    "pages/gongGao_manager/gongGao_manager",
+    "pages/more_gongGao/more_gongGao",
+    "pages/login/login",
+    "pages/home_page/home_page",
+    "pages/addClass/addClass",
+    "pages/mine/mine",
+    "pages/address_mail/address_mail",
+    "pages/mine_course/mine_course",
+    "pages/activity/activity",
+    "pages/mberManager/mberManager",
     "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
+    "pages/photo/photo",
+    "pages/gongGao/gongGao",
+    "pages/yuyue_course/yuyue_course"
   ],
   "window": {
+    "enablePullDownRefresh": true,
     "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "一沐瑜伽",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "tabBar": {
+    "color": "white",
+    "backgroundColor": " #f2f2f2",
+    "list": [
+      {
+        "selectedIconPath": "images/home_page0.png",
+        "iconPath": "images/home_page1.png",
+        "pagePath": "pages/home_page/home_page"
+      },
+      {
+        "selectedIconPath": "images/course1.png",
+        "iconPath": "images/course0.png",
+        "pagePath": "pages/appointment/appointment"
+      },
+      {
+        "selectedIconPath": "images/yuyue1.png",
+        "iconPath": "images/yuyue0.png",
+        "pagePath": "pages/mine_course/mine_course"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "selectedIconPath": "images/user0.png",
+        "iconPath": "images/user1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,9 @@
+<!--miniprogram/pages/gongGao/gongGao.wxml-->
+<view class='container'>
+  <view class='title'>{{gongGao[0].title}}</view>
+  <view class='top'>
+    <view class='small_title'>{{gongGao[0].title}}</view>
+    <view class='text'>{{gongGao[0].text}}</view>
+    <view class='time'>{{gongGao[0].time}}</view>
+  </view>
+</view>

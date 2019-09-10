@@ -1,0 +1,49 @@
+page {
+  height: 100%;
+}
+.contain {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: #f2f2f2;
+}
+.top {
+  margin-top:30rpx;
+  height: 300rpx;
+  justify-content: center;
+  width: 90%;
+  display: flex;
+  background-color: white;
+}
+.megss1 {
+  height: 90rpx;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  border-top: 2rpx solid #f2f2f2;
+}
+.megss {
+  width: 90%;
+  background-color: white;
+}
+
+.megss text {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+.megss1 text{
+  width:150rpx;
+}
+.operate {
+  font-size: 28rpx;
+  width: 100%;
+  border-radius: 20rpx;
+  height: 60rpx;
+  display: flex;
+  margin-top:40rpx;
+  background-color: #e6246e;
+  justify-content: center;
+  align-items: center;
+}

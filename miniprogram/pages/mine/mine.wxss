@@ -1,0 +1,85 @@
+/* miniprogram/pages/mine/mine.wxss */
+
+page {
+  height: 100%;
+}
+.operate{
+  font-size: 28rpx;
+  width: 100%;
+  /* position: relative; */
+  margin-top:12rpx;
+  display: flex;
+  border-radius: 20rpx;
+  height: 60rpx;
+  background-color:#e6246e;
+  justify-content: center;
+  align-items: center;
+}
+.contain {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f2f2f2; */
+  background-image: url('https://6669-fist-55b4f9-1258202685.tcb.qcloud.la/timg.jpg?');
+  background-size: 100% 100%;
+}
+
+.top {
+  height: 90%;
+  justify-content: center;
+  width: 80%;
+  display: flex;
+  background-color: white;
+}
+.image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:20rpx;
+  opacity: 0.2;
+}
+.user {
+  position: absolute;
+  top: 0rpx;
+  height: 155rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userHead {
+  border-radius: 50%;
+  overflow: hidden; /* 隐藏溢出的文本或元素（图像），使头像为圆形 */
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.userSex {
+  font-size: 35rpx;
+  color: black;
+  font-weight: 600;
+}
+
+.megss {
+  height: 85%;
+  width: 90%;
+  margin-top: 120rpx;
+  background-color: white
+}
+
+.megss text {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.megss1 {
+  height: 88rpx;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  border-top: 2rpx solid #f2f2f2;
+}

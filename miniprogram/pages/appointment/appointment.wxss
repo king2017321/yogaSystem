@@ -1,0 +1,176 @@
+scroll-view {
+  height: 110rpx;
+  width: 100%;
+}
+scroll-view .list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 1302rpx;
+}
+
+scroll-view .listItem {
+  text-align: center;
+  width: 186rpx;
+  height: 128rpx;
+  background-color: white;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  /* float: left; */
+  display: inline-block;
+}
+
+scroll-view .listItem text {
+  display: block;
+}
+
+scroll-view .listItem .name {
+  font-size: 23rpx;
+}
+
+scroll-view .listItem .date {
+  font-size: 19rpx;
+  opacity: 0.5;
+}
+
+scroll-view .current {
+  background-color: #e6246e;
+}
+
+scroll-view .current text {
+  color: #fff;
+}
+
+.operate button {
+  width: 300rpx;
+  height: 88rpx;
+  background-color: #fff;
+}
+
+.operate .del {
+  color: #e54449;
+}
+
+.operate button::after {
+  border: 2px solid #e54449;
+}
+
+.operate {
+  display: flex;
+  justify-content: space-around;
+}
+
+.operate button:nth-child(2):after {
+  border: 2px solid #e54449;
+}
+
+.operate .save {
+  color: #fff;
+  background-color: #e54449;
+}
+
+/* .operate {
+  width: 100%;
+  padding: 30rpx 0;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0rpx;
+} */
+
+.buju {
+  height: 142rpx;
+  display: flex;
+  border-bottom: 10rpx solid #f2f2f2;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 40rpx;
+}
+
+.time {
+  display: flex;
+  width: 33%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.time text {
+  font-size: 27rpx;
+}
+
+.yogoType {
+  display: flex;
+  height: 150rpx;
+  width: 300rpx;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yogoType > text:first-child {
+  font-size: 28rpx;
+}
+
+.yuyue {
+  align-items: center;
+  display: flex;
+  width: 33%;
+  height: 150rpx;
+  flex-direction: column;
+  margin-top: 27rpx;
+}
+
+.yuyue text {
+  font-size: 22rpx;
+  font-style: normal;
+}
+
+scroll-view .ctive {
+  background-color: #4675f9;
+}
+
+.scroll-view_H {
+  position: fixed;
+  top: 88rpx;
+}
+
+.swiper-tab {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  position: fixed;
+  top:0rpx;
+  background-color: white;
+  
+}
+
+.swiper-item1 {
+  color: #434343;
+  font-size: 25rpx;
+  margin-left: 280rpx;
+}
+
+.swiper-item2 {
+  width: 150rpx;
+  color: #434343;
+  font-size: 25rpx;
+  margin-left: 15rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.active {
+  color: #e6246e;
+  border-bottom: 2rpx solid #e6246e;
+}
+
+swiper {
+  background-color: #fff;
+}
+/* 隐藏滚动条固定用法 */
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+

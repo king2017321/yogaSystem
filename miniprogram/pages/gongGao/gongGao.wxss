@@ -1,0 +1,45 @@
+/* miniprogram/pages/gongGao/gongGao.wxss */
+
+page {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+.title {
+  background-color: white;
+  width: 100%;
+  height: 120rpx;
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+}
+
+.small_title {
+  width: 100%;
+  font-size: 30rpx;
+}
+.top {
+  background-color: white;
+  width: 100%;
+}
+
+.text {
+  width: 100%;
+  font-size: 30rpx;
+  flex-wrap: wrap;
+}
+
+.time {
+  width: 100%;
+  font-size: 25rpx;
+  opacity: 0.7;
+  display: flex;
+}

@@ -1,0 +1,15 @@
+<view class='container'>
+  <view class='title'>
+    <text>公告安排</text>
+  </view>
+  <view class='top'>
+    <view style='display: flex;margin-left:80rpx;width:150rpx'>公告标题:</view>
+    <view style='display: flex;margin-left:230rpx;'>
+      <input bindinput='_title' value='{{title}}' placeholder-style="font-size:27rpx;" placeholder="如:国庆放假通知" auto-focus='true' />
+    </view>
+  </view>
+  <view class='text'>
+    <textarea bindinput='_text' value='{{text}}' placeholder="请输入公告内容" auto-focus='true'></textarea>
+  </view>
+  <button class='operate' bindtap="must">确 定</button>
+</view>

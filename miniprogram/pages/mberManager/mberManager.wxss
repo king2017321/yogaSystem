@@ -1,0 +1,137 @@
+page {
+  height: 100%;
+}
+
+.roof {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  height: 60rpx;
+  background-color: #f2f2f2;
+  font-size: 30rpx;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+.swiper-tab {
+  width: 100%;
+  line-height: 70rpx;
+  display: flex;
+  position: fixed;
+  top: 65rpx;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5rpx solid #f2f2f2;
+}
+
+.swiper-item {
+  color: black;
+  font-size: 30rpx;
+}
+
+.active {
+  color: red;
+  border-bottom: 2rpx solid red;
+  font-size: 28rpx;
+}
+
+.scroll {
+  position: fixed;
+  top: 140rpx;
+  background-color: #f2f2f2;
+}
+
+.top {
+  background-color: #f2f2f2;
+  /* padding-top: 80rpx;
+  padding-bottom: 20rpx; */
+}
+
+.yuyuecourse {
+  height: 120rpx;
+  display: flex;
+  border-bottom: 5rpx solid #f2f2f2;
+  align-items: center;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.details {
+  display: flex;
+  border-bottom: 5rpx solid #f2f2f2;
+  font-size: 30rpx;
+  height: 100rpx;
+  align-items: center;
+  background-color: white;
+}
+
+.bot {
+  height: 50rpx;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.search {
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  float: right;
+  width: 500rpx;
+  text-align: center;
+  color: #807a7a;
+  font-size: 13px;
+  display: flex;
+  margin-left: 90rpx;
+  background-color: white;
+  border-radius: 50rpx;
+}
+
+.button {
+  display: flex;
+  margin-left: 5rpx;
+  border-radius: 50rpx;
+  background-color: white;
+  height: 65rpx;
+}
+
+.addmeber_view {
+  font-size: 28rpx;
+  margin-left: 50rpx;
+  width: 100rpx;
+}
+.addmeber {
+  height: 120rpx;
+  display: flex;
+  margin-top: 10rpx;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.addmeber_next {
+  
+  height: 120rpx;
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
+}
+.button1{
+    background: linear-gradient(to right,#FF4500,#FF0000);
+    width:140rpx;
+    border-radius: 40rpx;
+    height:60rpx;
+}
+.bot1{
+  height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  background-color: #f2f2f2;
+}

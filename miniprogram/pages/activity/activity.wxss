@@ -1,0 +1,21 @@
+/* miniprogram/pages/activity/activity.wxss */
+page {
+  height: 100%;
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+.container text{
+  opacity: 0.5;
+  font-size:35rpx;
+}
+.function_image {
+  width: 80rpx;
+  height: 80rpx;
+}

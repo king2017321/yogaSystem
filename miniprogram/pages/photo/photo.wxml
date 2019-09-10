@@ -1,0 +1,7 @@
+<!--miniprogram/pages/photo/photo.wxml-->
+<view class='container'>
+<block wx:if="{{flag==true}}">
+  <image src='../../images/gongneng.png' class='function_image'></image>
+  <text>暂不可用</text>
+  </block>
+</view>
